@@ -1,0 +1,4 @@
+:database:
+  :adapter: postgres
+  :database: momentum
+  :username: momentum
