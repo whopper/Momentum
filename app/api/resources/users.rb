@@ -18,12 +18,7 @@ class Users < Grape::API
       get do
         db = Util::connect_db
         result = db[:users].where(:user_id => params[:id])
-
-        if result.count > 0
-          result.all
-        else
-          "No user with ID #{params[:id]}"
-        end
+        result.count > 0 ? result.all : "No user with ID #{params[:id]}"
       end
     end
 
