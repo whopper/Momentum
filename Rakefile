@@ -13,6 +13,6 @@ ROOT_DIR = File.expand_path(File.dirname(__FILE__)) unless defined? ROOT_DIR
 desc 'Run all migrations'
 task :migrate do
   Sequel.extension :migration
-  DB = Sequel.connect(Util::settings(:database))
-  Sequel::Migrator.run(DB, File.join(ROOT_DIR, 'db', 'migrations'))
+  db = Util::connect_db
+  Sequel::Migrator.run(db, File.join(ROOT_DIR, 'db', 'migrations'))
 end

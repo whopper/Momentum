@@ -1,4 +1,10 @@
-:database:
-  :adapter: postgres
-  :database: momentum
-  :username: momentum
+:development:
+  :database:
+    :adapter: postgres
+    :database: momentum
+    :username: momentum
+:test:
+  :database:
+    :adapter: postgres
+    :database: momentum_test
+    :username: momentum
