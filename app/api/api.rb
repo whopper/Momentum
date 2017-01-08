@@ -5,6 +5,7 @@ require 'yaml'
 
 require_relative 'resources/users'
 require_relative 'resources/events'
+require_relative 'resources/categories'
 require_relative 'resources/reviews'
 require_relative 'util/helpers'
 
@@ -15,5 +16,6 @@ class API < Grape::API
 
   mount Users
   mount Events
+  mount Categories
   mount Reviews
 end
